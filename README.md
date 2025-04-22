@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Challenge
+
+This project is a web application built with Next.js (App Router) that allows users to explore a list of countries fetched from the public Trevor Blades Countries GraphQL API. It features real-time filtering by country code and includes a test suite using Jest and React Testing Library.
+
+## Core Features
+
+*   Fetches and displays country names and codes.
+*   Real-time filtering by country code (case-insensitive).
+*   Handles loading and error states during data fetching.
+*   Responsive design using Tailwind CSS.
+
+## Main Technologies Used
+
+*   Next.js (v15+ App Router)
+*   React (v19+)
+*   TypeScript
+*   Tailwind CSS (v4+)
+*   Apollo Client (for GraphQL)
+*   Jest & React Testing Library (for testing)
+*   SWC (Compiler for Next.js and Jest)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+*   Node.js (v18.17 or later recommended)
+*   npm or yarn package manager
+
+### 1. Installation
+
+* First, clone the repository to your local machine and navigate into the project directory.
+*(Assuming you have already cloned or created the project)*
+
+* Then, install the project dependencies:
+
+
+# Using npm
+npm install
+
+# Or using yarn
+yarn install
+*
+### 2. Running the Development Server
+
+* To start the application locally in development mode:
+
+# Using npm
 npm run dev
-# or
+
+# Or using yarn
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* This command will start the Next.js development server (typically on http://localhost:3000). Open this URL in your web browser to view the application. The server will automatically reload if you make changes to the code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Running Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* The project includes automated tests to verify component behavior. To run the test suite:
 
-## Learn More
+# Using npm
+npm test
 
-To learn more about Next.js, take a look at the following resources:
+# Or using yarn
+yarn test
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Project Structure Highlights
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- /app: Contains the core application code using Next.js App Router conventions (layout.tsx, page.tsx, components/, etc.).
+- /lib: Utility modules, including the Apollo Client setup (apolloClient.ts).
+- /app/page.test.tsx: Tests for the main page component.
+- jest.config.js & jest.setup.js: Configuration files for the Jest testing framework, set up to use SWC for code transformation.
